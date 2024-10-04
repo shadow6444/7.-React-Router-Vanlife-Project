@@ -1,0 +1,103 @@
+.van-detail-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  padding: 1rem 4rem;
+}
+
+.back-link {
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  color: #858585;
+  cursor: pointer;
+}
+
+.back-link p {
+  cursor: pointer;
+  color: #201f1d;
+}
+
+.van-details {
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  width: 93%;
+}
+
+.van-details img {
+  width: 100%;
+  height: 100vh;
+}
+
+.van-details h3 {
+  margin-top: 3rem;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #ffead0;
+  border-radius: 5px;
+}
+
+.simple {
+  background-color: #e17654;
+  color: #ffead0;
+}
+
+.luxury {
+  background-color: #161616;
+  color: #ffead0;
+}
+.rugged {
+  background-color: #115e59;
+  color: #ffead0;
+}
+
+.van-details h1 {
+  font-size: 2.125rem;
+  margin-top: 1.5rem;
+  font-weight: 700;
+  color: #161616;
+}
+
+.van-details h2 {
+  margin-top: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #161616;
+}
+
+.van-details h2 span {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.van-details p {
+  margin-top: 1rem;
+  font-family: Inter;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 23.92px;
+}
+
+.van-details a {
+  background-color: #ff8c38;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.8rem 1rem;
+  margin-top: 2rem;
+  text-decoration: none;
+  transition: transform 0.1s ease-in-out;
+}
+
+.van-details a:hover {
+  transform: translate(1px, 1px);
+}
