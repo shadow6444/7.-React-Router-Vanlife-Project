@@ -4,12 +4,14 @@
   box-sizing: border-box;
 }
 
-body,html{
+body,
+html {
   height: 100%;
   font-family: Inter;
+  background-color: #fff7ed;
 }
 
-#root{
+#root {
   height: 100%;
 }
 
