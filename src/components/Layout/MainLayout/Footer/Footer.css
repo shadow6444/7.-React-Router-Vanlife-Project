@@ -1,0 +1,10 @@
+.page-footer {
+    background-color: #252525;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #AAAAAA;
+    height: 8vh;
+  }
