@@ -1,0 +1,154 @@
+.van-list-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.van-list a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.van {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.van-list-header {
+  padding: 1rem 4rem;
+}
+
+.van-list-header h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 33.65px;
+  text-align: left;
+  color: #161616;
+}
+
+.van-list-filters {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+
+.van-list-filters button {
+  background-color: #ffead0;
+  color: #4d4d4d;
+  border-radius: 5px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  border: none;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+}
+
+.van-list-filters button.clear {
+  color: #4d4d4d;
+  text-decoration: underline;
+  background-color: #fff7ed;
+}
+
+.van-list-filters button.clear:hover {
+  color: black;
+}
+
+.van-list-filters button.simple:hover {
+  background-color: #e17654;
+  color: #ffead0;
+}
+
+.van-list-filters button.luxury:hover {
+  background-color: #161616;
+  color: #ffead0;
+}
+.van-list-filters button.rugged:hover {
+  background-color: #115e59;
+  color: #ffead0;
+}
+
+.van-list-filters button.simple.active {
+  background-color: #e17654;
+  color: #ffead0;
+}
+
+.van-list-filters button.luxury.active {
+  background-color: #161616;
+  color: #ffead0;
+}
+.van-list-filters button.rugged.active {
+  background-color: #115e59;
+  color: #ffead0;
+}
+
+.van-list {
+  margin: 2rem auto;
+  padding: 1rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem 3rem;
+  width: 90%;
+}
+
+.van img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.van-info {
+  padding: 0 0.3rem;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.van-name-price {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #161616;
+}
+
+.van-info p {
+  cursor: pointer;
+  font-family: "Avenir Next" serif;
+  margin-top: -5px;
+  font-size: 0.92rem;
+  text-align: right;
+  font-weight: 500;
+  color: #161616;
+}
+
+.tag {
+  cursor: pointer;
+  background-color: #e17654;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #ffead0;
+  width: fit-content;
+  padding: 0.4rem 1rem;
+  margin-top: -10px;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
+.simple {
+  background-color: #e17654;
+  color: #ffead0;
+}
+.luxury {
+  background-color: #161616;
+  color: #ffead0;
+}
+.rugged {
+  background-color: #115e59;
+  color: #ffead0;
+}
