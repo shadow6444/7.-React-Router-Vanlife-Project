@@ -1,4 +1,4 @@
-main {
+.home-container{
   height: calc(100vh - (11vh + 8vh));
   width: 100%;
 }
@@ -8,6 +8,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+}
+
+.home-hero-img img{
   height: 100%;
 }
 
