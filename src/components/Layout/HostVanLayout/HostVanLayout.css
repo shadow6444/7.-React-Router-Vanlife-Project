@@ -1,0 +1,111 @@
+.back-link {
+  font-size: 1.125rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  color: #858585;
+  cursor: pointer;
+}
+
+.back-link p {
+  cursor: pointer;
+  color: #201f1d;
+}
+
+.host-van-info-container {
+  padding: 1rem 4rem;
+  margin: 2rem auto;
+}
+
+.host-van-info-section {
+  margin-top: 3rem;
+  background-color: white;
+  border-radius: 6px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.host-van-data {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.host-van-data img {
+  width: 20%;
+  border-radius: 5px;
+}
+
+.host-van-text-data {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.host-van-text-data h3 {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  color: #ffead0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  width: fit-content;
+  padding: 0.3rem 0.8rem;
+}
+
+.simple {
+  background-color: #e17654;
+}
+
+.luxury {
+  background-color: #161616;
+}
+
+.rugged {
+  background-color: #115e59;
+}
+
+.host-van-text-data h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #161616;
+}
+
+.host-van-text-data h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #161616;
+}
+
+.host-van-text-data h2 span {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.host-van-links {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  column-gap: 3rem;
+}
+
+.host-van-links a {
+  text-decoration: none;
+  color: #4d4d4d;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.host-van-links a:hover {
+  color: #161616;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.host-van-links a.active {
+  color: #161616;
+  text-decoration: underline;
+  font-weight: 700;
+}
