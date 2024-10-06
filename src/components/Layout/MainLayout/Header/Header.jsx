@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
@@ -8,15 +8,24 @@ const Header = () => {
         #VANLIFE
       </Link>
       <nav className="navbar">
-        <Link className="nav-links" to="/host">
+        <NavLink
+          className={({ isActive }) => (isActive ? "active" : null)}
+          to="/host"
+        >
           Host
-        </Link>
-        <Link className="nav-links" to="/about">
+        </NavLink>
+        <NavLink
+          className={({ isActive }) => (isActive ? "active" : null)}
+          to="/about"
+        >
           About
-        </Link>
-        <Link className="nav-links" to="./vans">
+        </NavLink>
+        <NavLink
+          className={({ isActive }) => (isActive ? "active" : null)}
+          to="./vans"
+        >
           Vans
-        </Link>
+        </NavLink>
       </nav>
     </header>
   );
