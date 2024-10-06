@@ -1,0 +1,8 @@
+.fetch-api,
+.error-api {
+  margin-top: 2rem;
+}
+
+.error-api{
+    color: red;
+}
