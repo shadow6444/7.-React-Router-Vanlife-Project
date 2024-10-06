@@ -1,5 +1,7 @@
 import "./App.css";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+
+
 import MainLayout from "./components/Layout/MainLayout";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
@@ -14,6 +16,7 @@ import HostVanLayout from "./components/Layout/HostVanLayout";
 import HostVanDetail from "./components/pages/Host/HostVans/HostVan/HostVanDetails";
 import HostVanPricing from "./components/pages/Host/HostVans/HostVan/HostVanPricing";
 import HostVanPhoto from "./components/pages/Host/HostVans/HostVan/HostVanPhoto";
+import PageNotFound from "./components/pages/PageNotFound";
 
 import "./server";
 
@@ -37,6 +40,7 @@ function App() {
             </Route>
             <Route path="reviews" element={<Review />} />
           </Route>
+          <Route path="*" element={<PageNotFound/>}/>
         </Route>
       </Routes>
     </Router>
