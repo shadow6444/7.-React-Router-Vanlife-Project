@@ -20,14 +20,19 @@
     column-gap: 2rem;
   }
   
-  .nav-links {
+  .navbar a {
     font-size: 1rem;
     font-weight: 600;
     color: #4d4d4d;
     text-decoration: none;
   }
   
-  .nav-links:hover{
+  .navbar a:hover{
+    text-decoration: underline;
+    color: #161616;
+  }
+
+  .navbar a.active{
     text-decoration: underline;
     color: #161616;
   }
