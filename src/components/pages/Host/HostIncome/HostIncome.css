@@ -1,0 +1,94 @@
+.host-vans-income-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 4rem;
+  margin: 1rem auto;
+}
+
+.host-van-income {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.income {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.income h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #161616;
+}
+
+.income p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4d4d4d;
+  display: flex;
+  align-items: center;
+}
+
+.income p span {
+  font-weight: 700;
+  margin-left: 5px;
+  text-decoration: underline;
+  line-height: 22px;
+}
+
+.income h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #161616;
+}
+
+.income-graph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.income-graph img {
+  width: 40%;
+}
+
+.income-transactions {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.income-transactions-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.income-transactions-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #161616;
+}
+
+.income-transactions-header h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4d4d4d;
+}
+
+.income-transactions-header h3 span {
+  font-weight: 700;
+  line-height: 22px;
+  text-decoration: underline;
+}
+
+.income-transaction-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: default !important;
+}
