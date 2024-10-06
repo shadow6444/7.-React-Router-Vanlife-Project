@@ -36,9 +36,9 @@ const HostVanLayout = () => {
         <p>Back to all vans</p>
       </Link>
       {isFetching ? (
-        <p>Fetching Data From API...</p>
+        <h2 className="fetch-api">Fetching host van from API...</h2>
       ) : error ? (
-        <p>{error.message}</p>
+        <h2 className="error-api">{error.message}</h2>
       ) : (
         <div className="host-van-info-section">
           <div className="host-van-data">
@@ -73,7 +73,7 @@ const HostVanLayout = () => {
               Photos
             </NavLink>
           </div>
-          <Outlet context={{hostVan}}/>
+          <Outlet context={{ hostVan }} />
         </div>
       )}
     </section>
