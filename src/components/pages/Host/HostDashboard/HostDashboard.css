@@ -1,0 +1,124 @@
+.host-van-dashboard-container {
+  padding: 1rem 4rem;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.host-van-dashboard-income {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  background-color: #ffead0;
+  border-radius: 5px;
+}
+
+.dashboard-income {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.dashboard-income h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #161616;
+}
+
+.dashboard-income p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4d4d4d;
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-income p span {
+  font-weight: 700;
+  margin-left: 5px;
+  text-decoration: underline;
+  line-height: 22px;
+}
+
+.dashboard-income h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #161616;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dashboard-link {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #161616;
+}
+
+.dashboard-link:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.host-van-dashboard-review {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  background-color: #ffddb2;
+  border-radius: 5px;
+}
+
+.dashboard-review {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-review h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #161616;
+}
+
+.star-icon {
+  color: #ff8c38;
+  border-radius: 1px;
+  margin-left: 1rem;
+  margin-right: 0.3rem;
+}
+
+.dashboard-review h3 {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #161616;
+}
+
+.dashboard-review h3 span {
+  font-weight: 500;
+  color: #4d4d4d;
+}
+
+.host-van-dashboard-vans {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem;
+}
+
+.dashboard-vans-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard-van-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
