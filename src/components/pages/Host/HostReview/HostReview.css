@@ -1,0 +1,162 @@
+.host-vans-reviews-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 4rem;
+  margin: 1rem auto;
+}
+
+.host-vans-reviews-header {
+  display: flex;
+  align-items: baseline;
+  column-gap: 1rem;
+}
+
+.host-vans-reviews-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #161616;
+}
+
+.host-vans-reviews-header p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4d4d4d;
+  display: flex;
+  align-items: center;
+}
+
+.host-vans-reviews-header p span {
+  font-weight: 700;
+  margin-left: 5px;
+  text-decoration: underline;
+  line-height: 22px;
+}
+
+.reviews-rating {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.rating-header {
+  display: flex;
+  align-items: center;
+}
+
+.rating-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #161616;
+}
+
+.rating-header p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #161616;
+}
+
+.ratings {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 0;
+  width: 50%;
+}
+
+.rating-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between text and progress bar */
+  column-gap: 1rem;
+}
+
+.rating-list li p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4d4d4d;
+}
+
+.rating-percent {
+  text-align: right;
+  width: 10%;
+}
+
+.progress-bar {
+  width: 74%;
+  height: 8px;
+  background-color: #b9b9b9;
+  border-radius: 4px;
+}
+
+.progress-bar.complete {
+  background-color: #ff8c38;
+}
+
+.star-1 {
+  margin-right: 12px;
+}
+
+.reviews-container {
+  margin-top: 4rem;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+}
+
+.reviews li {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.review-star {
+  color: #ff8c38;
+  border-radius: 1px;
+  margin-right: 5px;
+}
+
+.review-header {
+  display: flex;
+  align-items: baseline;
+  column-gap: 0.5rem;
+}
+
+.review-header h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #161616;
+}
+
+.review-date {
+  color: #8c8c8c !important;
+}
+
+.review-text {
+  width: 90%;
+}
+
+.review-text p {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 22.16px;
+  color: #161616;
+}
+
+hr{
+    border: 1px solid #C7C7C7;
+    width: 100%;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+}
