@@ -1,11 +1,43 @@
 import "./VanList.css";
 import { useState } from "react";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 const VanList = () => {
   const [isFetching, setIsFetching] = useState(false);
   const [error, setError] = useState();
   const [vanList, setVanList] = useState([]);
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const typeFilter = searchParams.get("type");
+
+  // function handleFilter(event) {
+  //   setSearchParams({ type: event.target.innerText.toLowerCase() });
+  // }
+
+  function handleClearFilter() {
+    setSearchParams("");
+  }
+
+  // function genNewSearchParamString(key, value) {
+  //   const sp = new URLSearchParams(searchParams)
+  //   if (value === null) {
+  //     sp.delete(key)
+  //   } else {
+  //     sp.set(key, value)
+  //   }
+  //   return `?${sp.toString()}`
+  // }
+
+  function handleFilter(key, value) {
+    setSearchParams((prevParams) => {
+      if (value === null) {
+        prevParams.delete(key);
+      } else {
+        prevParams.set(key, value);
+      }
+      return prevParams;
+    });
+  }
 
   useEffect(() => {
     async function fetchData() {
@@ -17,7 +49,6 @@ const VanList = () => {
         if (!response.ok) {
           throw new Error("Failed to Fetch Data!");
         }
-        console.log(resData.vans);
         setVanList(resData.vans);
       } catch (error) {
         setError({ message: error.message || "Could not fetch data!" });
@@ -27,9 +58,13 @@ const VanList = () => {
     fetchData();
   }, []);
 
+  const filterdEls = typeFilter
+    ? vanList.filter((van) => van.type === typeFilter)
+    : vanList;
+
   const vanElements = (
     <div className="van-list">
-      {vanList.map((van) => {
+      {filterdEls.map((van) => {
         let cssClasses = "tag ";
 
         if (van.type === "simple") {
@@ -41,7 +76,11 @@ const VanList = () => {
         }
 
         return (
-          <Link to={`/vans/${van.id}`} key={van.id}>
+          <Link
+            to={van.id}
+            key={van.id}
+            state={{ search: `?${searchParams.toString()}`, type: typeFilter }}
+          >
             <div className="van">
               <img src={van.imageUrl} alt="van image" />
               <div className="van-info">
@@ -58,15 +97,45 @@ const VanList = () => {
       })}
     </div>
   );
+
+  let cssClasses;
+
   return (
     <section className="van-list-container">
       <div className="van-list-header">
         <h2>Explore our van options</h2>
         <div className="van-list-filters">
-          <button className="simple">Simple</button>
-          <button className="luxury">Luxury</button>
-          <button className="rugged">Rugged</button>
-          <button className="clear">Clear filters</button>
+          <button
+            onClick={() => handleFilter("type", "simple")}
+            className={`simple ${typeFilter === "simple" ? "active" : null}`}
+          >
+            Simple
+          </button>
+          <button
+            onClick={() => handleFilter("type", "luxury")}
+            className={`luxury ${typeFilter === "luxury" ? "active" : null}`}
+          >
+            Luxury
+          </button>
+          <button
+            onClick={() => handleFilter("type", "rugged")}
+            className={`rugged ${typeFilter === "rugged" ? "active" : null}`}
+          >
+            Rugged
+          </button>
+          {typeFilter && (
+            <button onClick={handleClearFilter} className="clear">
+              Clear filters
+            </button>
+          )}
+
+          {/* <Link to={genNewSearchParamString("type", "jedi")}>Jedi</Link>
+          <Link to={genNewSearchParamString("type", "sith")}>Sith</Link>
+          <Link to={genNewSearchParamString("type", null)}>Clear</Link> */}
+
+          {/* <button onClick={() => handleFilterChange("type", "jedi")}>Jedi</button>
+        <button onClick={() => handleFilterChange("type", "sith")}>Sith</button>
+        <button onClick={() => handleFilterChange("type", null)}>Clear</button> */}
         </div>
       </div>
       {isFetching ? (
