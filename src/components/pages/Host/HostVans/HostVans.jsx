@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./HostVans.css";
 import { useEffect, useState } from "react";
+import { getHostVans } from "../../../../api";
 const HostVans = () => {
   const [isFetching, setIsFetching] = useState(false);
   const [error, setError] = useState();
@@ -10,13 +11,8 @@ const HostVans = () => {
     async function fetchData() {
       setIsFetching(true);
       try {
-        const response = await fetch("/api/host/vans");
-        const resData = await response.json();
-
-        if (!response.ok) {
-          throw new Error("Failed to Fetch Data!");
-        }
-        setHostVans(resData.vans);
+        const vans = await getHostVans();
+        setHostVans(vans);
       } catch (error) {
         setError({ message: error.message || "Could not fetch data!" });
       }
@@ -50,9 +46,9 @@ const HostVans = () => {
       <section className="host-vans-container">
         <h1>Your listed vans</h1>
         {isFetching ? (
-          <p>Fetching Data From API...</p>
+          <h2 className="fetch-api">Fetching host vans from API...</h2>
         ) : error ? (
-          <p>{error.message}</p>
+          <h2 className="error-api">{error.message}</h2>
         ) : (
           hostVanElements
         )}
