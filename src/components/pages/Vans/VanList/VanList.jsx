@@ -2,9 +2,10 @@ import "./VanList.css";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
+import { getVans } from "../../../../api";
 const VanList = () => {
   const [isFetching, setIsFetching] = useState(false);
-  const [error, setError] = useState();
+  const [error, setError] = useState(null);
   const [vanList, setVanList] = useState([]);
 
   const [searchParams, setSearchParams] = useSearchParams();
@@ -43,17 +44,13 @@ const VanList = () => {
     async function fetchData() {
       setIsFetching(true);
       try {
-        const response = await fetch("/api/vans");
-        const resData = await response.json();
-
-        if (!response.ok) {
-          throw new Error("Failed to Fetch Data!");
-        }
-        setVanList(resData.vans);
+        const vansData = await getVans();
+        setVanList(vansData);
       } catch (error) {
-        setError({ message: error.message || "Could not fetch data!" });
+        setError(error);
+      } finally {
+        setIsFetching(false);
       }
-      setIsFetching(false);
     }
     fetchData();
   }, []);
@@ -64,7 +61,7 @@ const VanList = () => {
 
   const vanElements = (
     <div className="van-list">
-      {filterdEls.map((van) => {
+      {filterdEls?.map((van) => {
         let cssClasses = "tag ";
 
         if (van.type === "simple") {
@@ -97,8 +94,6 @@ const VanList = () => {
       })}
     </div>
   );
-
-  let cssClasses;
 
   return (
     <section className="van-list-container">
@@ -139,9 +134,13 @@ const VanList = () => {
         </div>
       </div>
       {isFetching ? (
-        <p>Fetching Data From API...</p>
+        <h2 className="fetch-api" aria-live="polite">
+          Fetching vans from API...
+        </h2>
       ) : error ? (
-        <p>{error.message}</p>
+        <h2 className="error-api" aria-live="assertive">
+          {error.statusText}: {error.message}
+        </h2>
       ) : (
         vanElements
       )}
