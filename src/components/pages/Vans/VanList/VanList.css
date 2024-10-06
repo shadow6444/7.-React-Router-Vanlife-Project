@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
+  padding: 1rem 4rem;
 }
 
 .van-list a {
@@ -13,10 +14,6 @@
   display: flex;
   flex-direction: column;
   cursor: pointer;
-}
-
-.van-list-header {
-  padding: 1rem 4rem;
 }
 
 .van-list-header h2 {
@@ -84,8 +81,7 @@
 }
 
 .van-list {
-  margin: 2rem auto;
-  padding: 1rem 3rem;
+  margin: 4rem auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 4rem 4rem;
